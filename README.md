@@ -20,8 +20,8 @@ An ongoing project focused on creating a general fitness app and focusing on imp
 - Nothing Yet
 
 ### Current Focus
-- [Requirements Elicitation](.markdown/RequirementsElicitation.md)
-- [Daily Foods](.markdown/DailyFoodsIndex.md)
+- [Requirements Elicitation](markdown/RequirementsElicitation.md)
+- [Daily Foods](markdown/DailyFoodsIndex.md)
 
 ### Weekly Tracking
 - [Week of 2/11](markdown/weekly/2024-02-11-weekly-page.md)
@@ -29,5 +29,9 @@ An ongoing project focused on creating a general fitness app and focusing on imp
 ## Notes
 ### Programs Used
 - **Obsidian**: For Markdown note management
-	- 
+	- **Advanced Slides**: Plugin for slide products
 - **VS Code**: For code editor
+### Directory Format
+- `markdown/`: holds all markdown files in `PascalCase.md` format
+	- `weekly/`: holds all weekly pages in `yyyy-mm-dd-weekly-page.md` format
+		- `slides/`: holds all slide type products in `yyyy-mm-dd-slides.md` format
