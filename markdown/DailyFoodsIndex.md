@@ -1,18 +1,22 @@
 # Food Section Idea
-
-
+###### Glossary
+- 🔮: Future possible functionality or idea
+- ❗: Priority
+- 🧠: High difficulty
 ## Questions/Cues
-### Answers
-- What should I eat for the day
-- What options do I have for splits
-### Asks
+### What Does This Program Answer?
+- What should I eat for the day?
+- How do I fill out the rest of my day?
+- 🔮 What can I meal prep?
+### What Does This Program Ask?
 - What nutrition do you want to aim for
 	- Calories, Macros (Carbs, Protein, Fat)
-	- Ranges
-- What have you eaten so far
-- What options are there
-	- How can each option be broken up
-- How should meals be split?
+	- 🔮 Ranges (Don't go over, don't go under, stay within 10%)
+- What have you eaten so far?
+	- What macros?
+	- 🔮What foods?
+- What options are there for food lists?
+	- How can each option be broken up? (eg. by meal, by snacks)
 
 ## Notes
 ### Windows
@@ -20,6 +24,7 @@
 	- Name
 	- Calories & Macros
 	- Ranges
+	- Steps
 - See Foods
 	- List all added
 	- Allow edits
@@ -35,9 +40,8 @@
 	- Set Meal Split
 	- Generate
 	- See list of ideas
-
-### Timeline
-- 
+## Executions
+- `/prototypes/foodsJSON.html` Basic one file webapp to generate Foods JSON
 
 ### Issues
 - 
