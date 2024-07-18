@@ -3,6 +3,9 @@
 - 🔮: Future possible functionality or idea
 - ❗: Priority
 - 🧠: High difficulty
+# What is it?
+> An app or site to generate meal plans for a given day based on pre-provided foods and nutritional requirements.
+> This was created to increase the ease of mentally juggling food nutrition facts and hand-creating meal plans, instead putting the burden on an algorithm to increase speed, accuracy, and ease.
 ## Questions/Cues
 ### What Does This Program Answer?
 - What should I eat for the day?

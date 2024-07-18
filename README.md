@@ -25,6 +25,9 @@ An ongoing project focused on creating a general fitness app and focusing on imp
 
 ### Weekly Tracking
 - [Week of 2/11](markdown/weekly/2024-02-11-weekly-page.md)
+- [Week of 6/2](markdown/weekly/2024-06-02-weekly-page.md)
+- [Week of 7/7](markdown/weekly/2024-07-07-weekly-page.md)
+- [Week of 7/14](markdown/weekly/2024-07-14-weekly-page.md)
 
 ## Notes
 ### Programs Used
