@@ -1,0 +1,61 @@
+form {
+  margin: 50px;
+  padding: 10px;
+  border-radius: 1%;
+  background-color: #d9dcdd;
+}
+
+.sticky-button {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  z-index: 1000;
+  display: grid;
+}
+
+#tableHolder {
+  margin: 50px;
+  padding: 10px;
+  border-radius: 1%;
+}
+
+.drop-zone {
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.drop-zone.dragover {
+  background-color: #b6cee6;
+}
+
+/* GENERATE.HTML */
+
+#resultsContainer {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meal-plan {
+  border: 1px solid #ddd;
+  margin: 20px;
+  padding: 10px;
+  width: 80%;
+}
+.meal-plan h2 {
+  text-align: center;
+}
+.group {
+  margin: 10px 0;
+}
+.food {
+  margin-left: 20px;
+  text-align: start;
+}
