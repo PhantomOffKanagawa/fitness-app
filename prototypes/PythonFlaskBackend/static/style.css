@@ -9,7 +9,7 @@ form {
   position: fixed;
   bottom: 10px;
   right: 15px;
-  z-index: 1000;
+  z-index: 10;
   display: grid;
 }
 
@@ -33,15 +33,44 @@ form {
   background-color: #b6cee6;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  animation: fadeOut 0.5s forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  10% {
+      opacity: 1;
+      pointer-events: none;
+  }
+  50% {
+      opacity: 0.3;
+  }
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
 /* GENERATE.HTML */
 
 #resultsContainer {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
+  /* margin: 2em; */
+  padding: 2em;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 .meal-plan {
   border: 1px solid #ddd;
@@ -52,10 +81,35 @@ form {
 .meal-plan h2 {
   text-align: center;
 }
+.meal-plan h5 {
+  text-align: center;
+}
 .group {
-  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.group h3 {
+    flex: 0 0 300px; /* Fixed width for the group label */
+    margin-right: 10px;
+}
+.food-container {
+    flex: 1; /* Take up the remaining space */
 }
 .food {
-  margin-left: 20px;
+    margin: 0; /* Remove default margin */
+    text-align: end;
+}
+.stats-container {
+  flex-basis: 100%;
   text-align: start;
+  margin-top: 1em;
+}
+.macro-card {
+    width: 150px;
+    margin-right: 20px;
 }

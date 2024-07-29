@@ -13,6 +13,10 @@ Session(app)
 def edit_foods():
     return render_template("foodsJSON.html")
 
+@app.route("/edit_user")
+def edit_user():
+    return render_template("userJSON.html")
+
 @app.route("/generate")
 def generate():
     return render_template("generate.html")
@@ -30,8 +34,22 @@ def set_foods():
     return json.dumps(response)
 
 @app.route('/api/get_session_foods', methods=['GET'])
-def get_session_data():
+def get_foods():
     data = session.get('foods', {})
+    response = {"status": "success", "session_data": data}
+    return json.dumps(response)
+
+@app.route("/api/set_session_user", methods=['POST'])
+def set_user():
+    data = request.get_json()
+    session['user'] = data
+    print(f"Received data: {data}")
+    response = {"status": "success", "received_data": data}
+    return json.dumps(response)
+
+@app.route('/api/get_session_user', methods=['GET'])
+def get_user():
+    data = session.get('user', {})
     response = {"status": "success", "session_data": data}
     return json.dumps(response)
 
@@ -40,7 +58,9 @@ def api_generate():
     food_data = session.get('foods', {})
     print(food_data)
     foods, groups, display_groups = load_food_items(food_data)
-    user = load_user()
+    user_data = session.get('user', {})
+    print(user_data)
+    user = load_user(user_data)
     data = generate_solution(foods, user, groups, display_groups)
     response = {"status": "success", "response_data": data}
     return response
