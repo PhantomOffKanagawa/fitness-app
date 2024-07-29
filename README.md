@@ -31,6 +31,9 @@ An ongoing project focused on creating a general fitness app and focusing on imp
       - Enabled (Whether a food should be used when generating plans)
   - Allows Generation of Meal Plans
   - Allows Editing of User
+    - "Current" Macros are subtracted from max and min when generating
+      - Allows to create a plan on top of already eaten food
+      - ToDo is improve with togglable display groups for already eaten meals
   - Saves User and Foods to Session or can be downloaded and loaded as local json files
 
 ### Current Focus

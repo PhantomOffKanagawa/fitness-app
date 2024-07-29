@@ -88,6 +88,52 @@ var form = {
         },
       },
     },
+    current_row: {
+      current_calories: {
+        label: "Current Calories (kcal):",
+        inputAttributes: {
+          type: "number",
+          required: true,
+          placeholder: 0,
+          min: 0,
+          step: 1,
+        },
+        width: 3,
+      },
+      current_carbs: {
+        label: "Current Carbs (g):",
+        inputAttributes: {
+          type: "number",
+          required: true,
+          placeholder: 0,
+          min: 0,
+          step: 0.1,
+        },
+        width: 3,
+      },
+      current_fat: {
+        label: "Current Fat (g):",
+        inputAttributes: {
+          type: "number",
+          required: true,
+          placeholder: 0,
+          min: 0,
+          step: 0.1,
+        },
+        width: 3,
+      },
+      current_protein: {
+        label: "Current Protein (g):",
+        inputAttributes: {
+          type: "number",
+          required: true,
+          placeholder: 0,
+          min: 0,
+          step: 0.1,
+        },
+        width: 3,
+      },
+    },
     // submit_row: {
     //   submit: {
     //     inputAttributes: {
@@ -129,6 +175,7 @@ var form = {
   }
   
   async function webSaveUser() {
+    updateUserJSON();
     const response = await fetch("/api/set_session_user", {
       method: "POST",
       headers: {
@@ -157,9 +204,14 @@ var form = {
       if ( key == "id" || key == "submit_row") continue;
       const row = form[key];
       for (element_key in row) {
-        user[element_key] = document.getElementById(element_key + "_input").value;
+        user[element_key] = Number(document.getElementById(element_key + "_input").value);
       }
     }
+  }
+
+  function downloadUser() {
+    updateUserJSON();
+    download(JSON.stringify(user), "user.json", "text/plain");
   }
 
   document.addEventListener("DOMContentLoaded", async function () {

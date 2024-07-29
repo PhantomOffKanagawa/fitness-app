@@ -27,7 +27,7 @@ def load_user(user_json):
         print(user_json)
         if user_json != {}:
             user_dict = user_json
-            user = User([user_dict["min_protein"], user_dict["max_protein"]], [user_dict["min_carbs"], user_dict["max_carbs"]], [user_dict["min_fat"], user_dict["max_fat"]], [user_dict["min_calories"], user_dict["max_calories"]])
+            user = User([user_dict["min_protein"] - user_dict["current_protein"], user_dict["max_protein"] - user_dict["current_protein"]], [user_dict["min_carbs"] - user_dict["current_carbs"], user_dict["max_carbs"] - user_dict["current_carbs"]], [user_dict["min_fat"] - user_dict["current_fat"], user_dict["max_fat"] - user_dict["current_fat"]], [user_dict["min_calories"] - user_dict["current_calories"], user_dict["max_calories"] - user_dict["current_calories"]])
             print("Loaded User from user.json")
         else:
             print("No user provided. Initializing defaults")
