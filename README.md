@@ -36,6 +36,13 @@ An ongoing project focused on creating a general fitness app and focusing on imp
       - ToDo is improve with togglable display groups for already eaten meals
   - Saves User and Foods to Session or can be downloaded and loaded as local json files
 
+### Use
+- `pip install -r requirements.txt`
+- `python .\Server.py`
+- Go to `http://127.0.0.1:5000/edit_user` and set requirements
+- Go to `http://127.0.0.1:5000/edit_foods` and set food options
+- Go to `http://127.0.0.1:5000/generate` and generate a meal plan
+
 ### Current Focus
 - [Requirements Elicitation](markdown/markdown/RequirementsElicitation.md)
 - [Daily Foods](markdown/DailyFoodsIndex.md)
